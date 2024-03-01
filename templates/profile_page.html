@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    <style>
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #080710;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            max-width: 400px;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.13);
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+            padding: 50px 35px;
+        }
+
+        .container h3 {
+            font-size: 32px;
+            font-weight: 500;
+            line-height: 42px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .profile-details {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .profile-details label {
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        .profile-details p {
+            font-size: 14px;
+            font-weight: 300;
+        }
+
+        .btn-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .btn-container a {
+            text-decoration: none;
+            color: #ffffff;
+            background-color: #23a2f6;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: 500;
+            transition: background-color 0.3s;
+        }
+
+        .btn-container a:hover {
+            background-color: #1845ad;
+        }
+
+        .logout-btn {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .logout-btn button {
+            background-color: #ff512f;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .logout-btn button:hover {
+            background-color: #f09819;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3>Welcome to Your Profile</h3>
+        <div class="profile-details">
+            <label for="first-name">First Name:</label>
+            <p>{{ user.first_name }}</p>
+            <label for="last-name">Last Name:</label>
+            <p>{{ user.last_name }}</p>
+        </div>
+        <div class="btn-container">
+            <a href="#">Edit Profile</a>
+        </div>
+        <div class="logout-btn">
+            <a href="/logout"><button>Logout</button></a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home Page</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: #000;
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  .container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #0000ff, #00ffff, #ff00ff);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite;
+    z-index: -1;
+  }
+  .home-content {
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+  }
+  .home-content h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    animation: neonGlow 2s infinite alternate;
+  }
+  .home-content .btn {
+    margin-top: 20px;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    color: #fff;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+  .home-content .btn-primary {
+    background-color: #007bff;
+    border: none;
+    border-radius: 25px;
+  }
+  .home-content .btn-primary:hover {
+    transform: scale(1.05);
+  }
+  .home-content .btn-secondary {
+    background-color: #6c757d;
+    border: none;
+    border-radius: 25px;
+  }
+  .home-content .btn-secondary:hover {
+    transform: scale(1.05);
+  }
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes neonGlow {
+    0% {
+      text-shadow: 0 0 10px rgba(255,255,255, 0.8), 0 0 20px rgba(255,255,255, 0.8), 0 0 30px rgba(255,255,255, 0.8), 0 0 40px rgba(0, 255, 0, 0.8), 0 0 70px rgba(0, 255, 0, 0.8), 0 0 80px rgba(0, 255, 0, 0.8), 0 0 100px rgba(0, 255, 0, 0.8);
+    }
+    100% {
+      text-shadow: 0 0 5px rgba(255,255,255, 0.8), 0 0 10px rgba(255,255,255, 0.8), 0 0 15px rgba(255,255,255, 0.8), 0 0 20px rgba(0, 255, 0, 0.8), 0 0 35px rgba(0, 255, 0, 0.8), 0 0 40px rgba(0, 255, 0, 0.8), 0 0 50px rgba(0, 255, 0, 0.8);
+    }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="background"></div>
+  <div class="home-content">
+    <h1>Home Page</h1>
+    <div class="row justify-content-center">
+      <div class="col-md-6 text-center">
+        <a href="/login_view"><button type="button" class="btn btn-primary">Login</button></a>
+      </div>
+    </div>
+
+    <div class="row justify-content-center mt-3">
+      <div class="col-md-6 text-center">
+        <a href="/signup"><button type="button" class="btn btn-secondary">Sign Up</button></a>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
